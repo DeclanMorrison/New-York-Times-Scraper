@@ -20,8 +20,24 @@ $(document).ready(function() {
         $.ajax({
             url: url,
             method: 'GET',
-        }).then(function(response){
-            console.log(response);
+        }).then(function (response){
+            console.log(response)
+            const articles = response.response.docs;
+            $.each(articles, function (index, value){
+
+                $article = $(`<div class="card">
+                                <div class="card-header">
+                                    ${value.headline.main}
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">${value.snippet}</h5>
+                                    <p class="card-text"></p>
+                                    <a href="${value.web_url}" class="btn btn-primary">Go to this article</a>
+                                </div>
+                            </div>`);
+
+                $("#retrieve-articles").prepend($article);
+            });
         });
 
     });
