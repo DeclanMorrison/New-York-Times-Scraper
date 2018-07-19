@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700');
+
+.jumbotron{
+    background-color: #2E5EAA;
+}
+
+.display-4{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.5em;
+    color: #FCFCFC;
+}
+
+.card{
+    width: 96vw;
+    margin: auto;
+}
